@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    android:backgroundTint="#FFFFFF"
+    android:onClick="calculateEMI"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/mortAmount"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="64dp"
+        android:hint="Mortgage Amount ($)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <EditText
+        android:id="@+id/intRate"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:hint="Interest Rate (%)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mortAmount" />
+
+
+    <EditText
+        android:id="@+id/repaymentTime"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:hint="Repayment Period (months)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intRate" />
+
+    <Button
+        android:id="@+id/calcBtn"
+        android:layout_width="279dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#009688"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repaymentTime" />
+
+    <TextView
+        android:id="@+id/calcResult"
+        android:layout_width="282dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="75dp"
+        android:paddingTop="6dp"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcBtn" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/appTitle"
+        android:layout_width="408dp"
+        android:layout_height="63dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#009688"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="EMI Mortgage Calculator"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="#FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
